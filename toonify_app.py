@@ -29,8 +29,8 @@ if uploaded_file is not None:
         },
         headers={'api-key': 'ed22d0b2-4cc5-4223-9e48-302f8a86c7c5'}
     )
-    #print(r.json())
-    imgURL = r['output_url']
+    response_data = r.json()
+    imgURL = response_data['output_url']
     response = requests.get(imgURL)
     img = Image.open(BytesIO(response.content))
 
