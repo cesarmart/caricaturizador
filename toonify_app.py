@@ -24,7 +24,8 @@ if uploaded_file is not None:
     r = requests.post(
         "https://api.deepai.org/api/toonify",
         files={
-            'image': open(uploaded_file, 'rb'),
+            #'image': open(uploaded_file, 'rb'),
+            'image': uploaded_file,
         },
         headers={'api-key': 'ed22d0b2-4cc5-4223-9e48-302f8a86c7c5'}
     )
