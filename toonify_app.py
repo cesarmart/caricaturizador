@@ -35,7 +35,7 @@ if uploaded_file is not None:
     img = Image.open(BytesIO(response.content))
 
     #caraTest_cv=cv.cvtColor(caraTest,cv.COLOR_BGR2RGB)
-    st.subheader("Este es el resultado:")
+    st.subheader("Mi obra maestra:")
     st.image(img, caption='', use_column_width=True)
     st.subheader("Hasta luego!")
         
